@@ -410,21 +410,21 @@ namespace vaoc
 
         partial class TAB_ORDREDataTable
         {
-            public int ProchainID_ORDRE
-            {
-                get
-                {
-                    if (this.Count > 0)
-                    {
-                        System.Nullable<int> maxIdOrdre =
-                            (from ordre in this
-                             select ordre.ID_ORDRE)
-                            .Max();
-                        return (int)maxIdOrdre;
-                    }
-                    return 0;
-                }
-            }
+            //public int ProchainID_ORDRE
+            //{
+            //    get
+            //    {
+            //        if (this.Count > 0)
+            //        {
+            //            System.Nullable<int> maxIdOrdre =
+            //                (from ordre in this
+            //                 select ordre.ID_ORDRE)
+            //                .Max();
+            //            return (int)maxIdOrdre+1;
+            //        }
+            //        return 0;
+            //    }
+            //}
 
             /// <summary>
             ///  Renvoi l'ordre correspondant à un identifiant du web
