@@ -494,6 +494,23 @@ namespace vaoc
                 }
                 return resOrdre[0];
             }
+
+            /// <summary>
+            ///  Renvoi le premier ordre affecté à l'unité, null si aucun
+            /// </summary>
+            /// <param name="ID_PION">identifiant du pion sur lequel on cherche l'ordre</param>
+            /// <returns>ordre courant du pion, null si aucun</returns>
+            public TAB_ORDRERow Premier(int ID_PION)
+            {
+                string requete = string.Format("ID_PION={0}", ID_PION);
+                string tri = "ID_ORDRE";
+                TAB_ORDRERow[] resOrdre = (TAB_ORDRERow[])Select(requete, tri);
+                if (0 == resOrdre.Length)
+                {
+                    return null;
+                }
+                return resOrdre[0];
+            }
         }
 
         partial class TAB_ORDRERow

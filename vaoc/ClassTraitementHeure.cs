@@ -288,7 +288,6 @@ namespace vaoc
                 }
 
                 // Une unité envoie un message régulièrement, ça rassure le joueur s'il n'est pas proche de ses troupes !
-
                 i = 0;
                 while (i < Donnees.m_donnees.TAB_PION.Count())
                 {
@@ -3992,6 +3991,8 @@ namespace vaoc
             iWeb.SauvegardeModelesPion(Donnees.m_donnees.TAB_PARTIE[0].ID_PARTIE);
 
             iWeb.SauvegardeRole(Donnees.m_donnees.TAB_PARTIE[0].ID_PARTIE);
+
+            iWeb.SauvegardeForum(Donnees.m_donnees.TAB_PARTIE[0].ID_PARTIE);
 
             iWeb.SauvegardeObjectifs(Donnees.m_donnees.TAB_PARTIE[0].ID_PARTIE);
 
